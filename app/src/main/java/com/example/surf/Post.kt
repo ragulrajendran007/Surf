@@ -1,6 +1,8 @@
 package com.example.surf
 
-
+import android.app.Dialog
+import android.widget.TextView
+import android.widget.Toast
 
 
 class Post{
@@ -14,3 +16,5 @@ class Post{
         this.image=image
     }
 }
+
+

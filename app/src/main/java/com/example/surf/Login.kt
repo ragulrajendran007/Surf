@@ -2,14 +2,19 @@ package com.example.surf
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.PackageManager
+import android.net.Uri
+
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
+
 
 class Login : AppCompatActivity() {
 
@@ -30,8 +35,8 @@ class Login : AppCompatActivity() {
         authStateListener = FirebaseAuth.AuthStateListener { auth ->
             val currentUser = auth.currentUser
             if (currentUser != null) {
-                finish()
-                startActivity(Intent(this, Main::class.java))
+//                finish()
+//                startActivity(Intent(this, Main::class.java))
 
             } else {
 
@@ -46,7 +51,7 @@ class Login : AppCompatActivity() {
 
 
 
-            //firebaseAuth.addAuthStateListener(authStateListener)
+//            firebaseAuth.addAuthStateListener(authStateListener)
 
 
 

@@ -6,39 +6,84 @@
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="281dp"
-        android:layout_height="378dp"
+        android:layout_width="363dp"
+        android:layout_height="644dp"
         android:background="#032E53"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498">
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <EditText
-            android:id="@+id/pdes"
-            android:layout_width="236dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="48dp"
+            android:id="@+id/ploc1"
+            android:layout_width="280dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/text"
             android:ems="10"
             android:gravity="start|top"
-            android:hint="Enter post caption"
+            android:hint="Enter Start location"
             android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pdes"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/ploc2"
+            android:layout_width="280dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/text"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter End location"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ploc1"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/pnum"
+            android:layout_width="280dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/text"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter Contact Number"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ploc2"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <EditText
+            android:id="@+id/pdes"
+            android:layout_width="308dp"
+            android:layout_height="245dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/text"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="         Enter issue description"
+            android:inputType="textMultiLine"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ptit"
             tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/sub"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="128dp"
+            android:layout_height="34dp"
 
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="100dp"
             android:layout_marginTop="314dp"
-            android:layout_marginEnd="120dp"
+            android:layout_marginEnd="100dp"
             android:layout_marginBottom="30dp"
             android:background="@drawable/text"
             android:text="SUBMIT"
@@ -52,21 +97,21 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.899" />
 
-        <ImageView
-            android:id="@+id/addpic"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="314dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <EditText
+            android:id="@+id/ptit"
+            android:layout_width="303dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/text"
+            android:ems="10"
+            android:gravity="start|top"
+            android:hint="Enter issue "
+            android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/sub"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/baseline_add_a_photo_24" />
+            tools:ignore="TouchTargetSizeCheck" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

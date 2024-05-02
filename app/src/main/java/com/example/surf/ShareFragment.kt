@@ -118,7 +118,7 @@ class ShareFragment : Fragment() {
             }
 
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Toast.makeText(activity,"sorry for the unexpected error",Toast.LENGTH_SHORT)
             }
 
 
@@ -143,7 +143,7 @@ class ShareFragment : Fragment() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    TODO("Not yet implemented")
+                    Toast.makeText(activity,"sorry for the unexpected error",Toast.LENGTH_SHORT)
                 }
 
 

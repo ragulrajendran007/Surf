@@ -11,13 +11,12 @@
         android:id="@+id/imageView"
         android:layout_width="78dp"
         android:layout_height="74dp"
-        android:layout_marginStart="4dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/gbg" />
+        app:srcCompat="@drawable/sukuna" />
 
     <TextView
-        android:id="@+id/nam"
+        android:id="@+id/tit"
         android:layout_width="0dp"
         android:layout_height="21dp"
         android:layout_marginStart="20dp"

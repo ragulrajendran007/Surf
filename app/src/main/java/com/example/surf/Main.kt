@@ -55,11 +55,11 @@ class Main : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListene
             R.id.nav_home -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, HomeFragment()).commit()
             R.id.nav_settings -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, SettingsFragment()).commit()
+                .replace(R.id.fragment_container, AddIssueFragment()).commit()
             R.id.nav_share -> supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, ShareFragment()).commit()
             R.id.nav_about -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, AboutFragment()).commit()
+                .replace(R.id.fragment_container, MyIssuesFragment()).commit()
             R.id.nav_logout -> {
                 mAuth.signOut()
                 val intent= Intent(this@Main,Login::class.java)

@@ -55,46 +55,46 @@ class gfeedFragment : Fragment() {
         // Inflate the layout for this fragment
 
         val rootView = inflater.inflate(R.layout.fragment_gfeed, container, false)
-
-        storageReference = FirebaseStorage.getInstance().reference
-        var result:String=""
-
-        var secuid:String=""
-        dbref = FirebaseDatabase.getInstance().getReference()
-        setFragmentResultListener("requestKey") { key, bundle ->
-            result = bundle.getString("data").toString()
-            gcode = bundle.getString("datas").toString()
-            secuid = bundle.getString("datez").toString()
-           // val toolbar = rootView.findViewById<Toolbar>(R.id.toolbar)
-//            toolbar.title=gcode
-            val addpost=rootView.findViewById<ImageView>(R.id.addpost)
-            addpost.setOnClickListener {
-                val dialogBinding1 = layoutInflater.inflate(R.layout.addfeed, null)
-                val mydialog1 = Dialog(requireActivity())
-                mydialog1.setContentView(dialogBinding1)
-                mydialog1.setCancelable(true)
-                val sub = dialogBinding1.findViewById<TextView>(R.id.sub)
-                val pdesc = dialogBinding1.findViewById<TextView>(R.id.pdes)
-                val pic=dialogBinding1.findViewById<ImageView>(R.id.addpic)
-                pic.setOnClickListener {
-                    if (pdesc.text != "") {
-                        desc=pdesc.text.toString()
-                    openImagePicker()
-                        }}
-                sub.setOnClickListener {
-
-
-                        mydialog1.dismiss()
-                    }
-
-                mydialog1.show()
-            }
-        }
-        // Open image picker when a button is clicked
-
-
-
-
+//
+//        storageReference = FirebaseStorage.getInstance().reference
+//        var result:String=""
+//
+//        var secuid:String=""
+//        dbref = FirebaseDatabase.getInstance().getReference()
+//        setFragmentResultListener("requestKey") { key, bundle ->
+//            result = bundle.getString("data").toString()
+//            gcode = bundle.getString("datas").toString()
+//            secuid = bundle.getString("datez").toString()
+//           // val toolbar = rootView.findViewById<Toolbar>(R.id.toolbar)
+////            toolbar.title=gcode
+//            val addpost=rootView.findViewById<ImageView>(R.id.addpost)
+//            addpost.setOnClickListener {
+//                val dialogBinding1 = layoutInflater.inflate(R.layout.addfeed, null)
+//                val mydialog1 = Dialog(requireActivity())
+//                mydialog1.setContentView(dialogBinding1)
+//                mydialog1.setCancelable(true)
+//                val sub = dialogBinding1.findViewById<TextView>(R.id.sub)
+//                val pdesc = dialogBinding1.findViewById<TextView>(R.id.pdes)
+//                val pic=dialogBinding1.findViewById<ImageView>(R.id.addpic)
+//                pic.setOnClickListener {
+//                    if (pdesc.text != "") {
+//                        desc=pdesc.text.toString()
+//                    openImagePicker()
+//                        }}
+//                sub.setOnClickListener {
+//
+//
+//                        mydialog1.dismiss()
+//                    }
+//
+//                mydialog1.show()
+//            }
+//        }
+//        // Open image picker when a button is clicked
+//
+//
+//
+//
         return rootView
     }
 

@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter( val userlist: ArrayList<User>): RecyclerView.Adapter<MyAdapter.MyViewHolder>( ){
+class MyAdapterIssue(val issuelist: ArrayList<issueResponse>): RecyclerView.Adapter<MyAdapterIssue.MyViewHolder>( ){
     private lateinit var mListener: onItemClickListener
     interface onItemClickListener{
         fun onItemClick(position:Int)
@@ -16,23 +16,24 @@ class MyAdapter( val userlist: ArrayList<User>): RecyclerView.Adapter<MyAdapter.
         mListener=listener
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val itemView= LayoutInflater.from(parent.context).inflate(R.layout.chatitem,parent,false)
+        val itemView= LayoutInflater.from(parent.context).inflate(R.layout.issueitem,parent,false)
         return MyViewHolder(itemView,mListener)
     }
     override fun getItemCount(): Int {
-        return userlist.size
+        return issuelist.size
     }
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val currentItem=userlist[position]
-        holder.pic.setImageResource(R.drawable.sukuna)
-        holder.name.text= currentItem.name.toString()
-        holder.mail.text=currentItem.mail.toString()
+        val currentItem=issuelist[position]
+        holder.title.text=currentItem.iss.toString()
+        holder.pickuplocation.text= currentItem.puloc.toString()
+        holder.deliverylocation.text=currentItem.delloc.toString()
 
     }
     class MyViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView){
-        val pic: ImageView =itemView.findViewById(R.id.imageView)
-        val name: TextView =itemView.findViewById(R.id.tit)
-        val mail: TextView =itemView.findViewById(R.id.mai)
+
+        val title: TextView =itemView.findViewById(R.id.tit)
+        val pickuplocation: TextView =itemView.findViewById(R.id.pul)
+        val deliverylocation: TextView =itemView.findViewById(R.id.dl)
         init{
             itemView.setOnClickListener {
                 listener.onItemClick(adapterPosition)
